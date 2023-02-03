@@ -1,0 +1,15 @@
+Address        Machine Code       Operands        Instructions
+00005000          33FC          3C,$00005000          MOVE       #60,$00005000
+00005008          4E41                                TRAP                  #1
+0000500A          33CO             $00005004          MOVE        DO,$00005004
+00005010          3039             $00005000          MOVE        $00005000,DO
+00005016          D079             $00005004           ADD        $00005004,DO
+0000501C          33CO             $00005002          MOVE        DO,$00005002
+00005022          0679           F,$00005002          ADDI       #15,$00005002
+0000502A          4E42                                TRAP                  #2
+0000502C          4E40                                TRAP                  #0
+
+Symbol Table
+Label      Memory Address
+LOOP1      0000500A
+LOOP2      00005022
